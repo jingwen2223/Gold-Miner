@@ -1,6 +1,8 @@
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 
@@ -8,15 +10,25 @@ public class GameWindow extends JFrame{
 	
 	background bg= new background(); //make new background
 	Line line = new Line();
-	
+
 	
 	void launch() {
 		this.setVisible(true);
 		this.setSize(700,900);
 		this.setLocation(null);
 		this.setTitle("Gold Miner");
-
-		setDefaultCloseOperation(EXIT_ON_CLOSE); //clicking the "X" for exsiting the GAME
+		
+		addMouseListener(new MouseAdapter(){
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				super.mouseClicked(e);
+				if(e.getButton()==1) {line.state=1;}
+			
+			
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	
+		
+		 //clicking the "X" for exsiting the GAME
 		while(true) {
 			repaint();
 			try {
@@ -26,8 +38,9 @@ public class GameWindow extends JFrame{
 				e.printStackTrace();
 			}
 		}
-	}
 	
+		}
+
 	
 
 	@Override
@@ -45,5 +58,10 @@ public class GameWindow extends JFrame{
 		
 	}
 	
+		
+		}
 	
-}
+		
+		
+	
+
