@@ -11,7 +11,7 @@ int endy;		//end x, y
 //endx = x+leng*cosa;
 //endy = y+leng* sina;
 
-double length =50;
+double length =100;
 double n = 0; //angle
 
 int dir =100;
@@ -26,10 +26,8 @@ void  paintSelf(Graphics g) {
 	
 	g.setColor(Color.red);//giving line a color
 	
-	for(int i=0;i<100;i++) {
-		endx= -endx;
-		endx++;
+	
 	g.drawLine(x, y, endx, endy);}
 	
 }
-}
+
