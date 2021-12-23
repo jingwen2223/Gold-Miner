@@ -6,8 +6,8 @@ public class Object {
 	int y;
 	
 	
-	int width= (int) (Math.random()*2+25);;;
-	int height= (int) (Math.random()*2+20);;;
+	int width= 75;
+	int height= 75;
 	
 	Image img;
 	boolean flag; // can be moved?
@@ -16,8 +16,11 @@ public class Object {
 		//	g.drawImage(img, x, y, null);
 		
 			g.drawImage(img, x,y, width,height , null); //(0,0) center
-		
 
 	}
+	public int getWidth() {
+		return width;
+	}
+	
 	
 }

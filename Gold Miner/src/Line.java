@@ -11,7 +11,7 @@ int endy;		//end x, y
 //endx = x+leng*cosa;
 //endy = y+leng* sina;
 
-double length =60;
+double length =30;
 double n = 0; //angle setting up
 
 int dir =1;
@@ -91,9 +91,10 @@ void  paintSelf(Graphics g) {
 				length = length -10;
 				lines(g);
 				for(Object obj:this.frame.objectList) {
-					if(obj.flag=true) {  //prevent all gold disappear
-					obj.x=endx-26;
+					if(obj.flag==true) {  //prevent all gold disappear
+					obj.x=endx-obj.getWidth()/2;
 					obj.y=endy;
+					
 					if(length<=100) {
 						obj.x=-150;
 						obj.y=-150;

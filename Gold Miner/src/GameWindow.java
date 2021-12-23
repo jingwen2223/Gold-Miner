@@ -12,7 +12,7 @@ import javax.swing.*;
 
 public class GameWindow extends JFrame{
 	
-	
+	int num;
 	
 	ArrayList <Object>objectList = new ArrayList<Object>(); //store gold and stone;
 	
@@ -21,9 +21,17 @@ public class GameWindow extends JFrame{
 	Gold gold = new Gold();
 	Rock rock = new Rock();
 
-	{  	//code bock
-		for(int i = 0; i<3; i++) {
+	{  	
+		num= (int) (Math.random()*3);
+		for(int i=0; i<num+1; i++) {//code bock for generating amount of gold
 			objectList.add(new Gold());
+		}
+	
+	
+	  	
+		
+		for(int i=0; i<5; i++) {//code bock for generating amount of gold
+			objectList.add(new Rock());
 		}
 	
 	}
